@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You!</title>
+    <style>
+        /* CSS สำหรับหน้า Splash */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* ห้ามเลื่อนหน้า */
+            background-color: #fce4ec; /* พื้นหลังชมพูอ่อน */
+            color: #ad1457; /* ข้อความสีชมพูเข้ม */
+        }
+
+        .splash-page {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f06292; /* สีชมพูเข้ม */
+            color: white;
+            text-align: center;
+            flex-direction: column;
+            animation: fadeInSplash 2s ease-in-out;
+        }
+
+        .splash-page h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .splash-page p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .additional-message {
+            font-size: 1.2em;
+            margin-top: 30px;
+            color: #fff;
+            font-weight: bold;
+            animation: fadeInMessage 2s ease-in-out 1s;
+        }
+
+        .btn-enter {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #f8bbd0; /* ปุ่มสีชมพูอ่อน */
+            color: #ad1457; /* ข้อความในปุ่มสีชมพูเข้ม */
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-enter:hover {
+            background-color: #ec407a; /* ปุ่มสีชมพูเข้มเมื่อ hover */
+            color: white;
+        }
+
+        /* การเคลื่อนไหวสำหรับหน้า Splash */
+        @keyframes fadeInSplash {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* การเคลื่อนไหวข้อความเพิ่มเติม */
+        @keyframes fadeInMessage {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* CSS สำหรับหน้าเว็บหลัก */
+        .main-page {
+            display: none; /* เริ่มต้นซ่อนหน้าเว็บหลัก */
+            animation: fadeIn 2s ease-in-out; /* แสดงหน้าเว็บหลักค่อย ๆ */
+        }
+
+        /* การเคลื่อนไหวสำหรับ fadeIn */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        header {
+            background-color: #ec407a; /* ส่วนหัวเป็นสีชมพูเข้ม */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .caption {
+            font-size: 1.5em;
+            color: #ad1457; /* สีชมพูเข้ม */
+            margin-top: 30px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 15px;
+        }
+
+        .song h2 {
+            font-size: 2em;
+            color: #d81b60; /* สีชมพูกลาง */
+        }
+
+        .message {
+            font-size: 1.2em;
+            color: #ad1457;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #f06292; /* ส่วนท้ายเป็นสีชมพูเข้ม */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- หน้าแรก (Splash Page) -->
+    <div class="splash-page" id="splashPage">
+        <h1>Congratulations ! </h1>
+        <p>วันแห่งความทรงจำและการเริ่มต้นใหม่</p>
+        <div class="additional-message">
+            <p>ความทรงจำของเราในวันนี้ จะอยู่ในใจตลอดไป และจะเดินทางต่อไปด้วยกัน ! </p>
+        </div>
+        <button class="btn-enter" onclick="goToMainPage()">กดตรงนี้❤️❤️</button>
+    </div>
+
+    
+
+        <footer>
+            <p>&copy; 2025 IG : NAT_XTZ | สร้างขึ้นจากความรักและความทรงจำ</p>
+        </footer>
+    </div>
+
+    <script>
+        // ฟังก์ชันให้กดปุ่มเพื่อเข้าสู่เว็บหลัก
+        function goToMainPage() {
+    window.open('index.html');  // ใส่ URL ของหน้าถัดไปที่ต้องการเปิด
+    document.getElementById('splashPage').style.display = 'none';
+    document.getElementById('mainPage').style.display = 'block';
+}
+
+    </script>
+
+</body>
+</html>
